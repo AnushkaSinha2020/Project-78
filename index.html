@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Project 78</title>
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+        <div>
+        <h1>My Family Book</h1>
+        <img id="album" src="6d93886f-4201-496d-af6c-062c4fb0b5e2.jpg">
+        <p id="name">Click the button below to view the next picture</p>
+        <button type="button" onclick="nextslide()">Next </button>
+        </div>
+        <script>
+        var images= [
+            "IMG-20210222-WA0016 (1).jpg",
+            "IMG_20191027_182611.jpg",
+            "IMG_20150201_190639734.jpg",
+            "FB_IMG_1605966048527.jpg",
+            "IMG-20210222-WA0017.jpg",
+            "6d93886f-4201-496d-af6c-062c4fb0b5e2.jpg"
+        ];
+        var names= [
+            "Anushka Sinha",
+            "Nibha Sinha",
+            "Abhay Deeip",
+            "Mousumi Sinha",
+            "Anmol Sinha",
+            "Click the button below to view the next picture"
+        ];
+        var i = 0;
+        function nextslide(){
+        document.getElementById("name").innerHTML = names[i];
+        document.getElementById("album").src= images[i];
+        i++;
+        if(i == 6) { i=0; }
+        }
+        </script>
+    </body>
+</html>
